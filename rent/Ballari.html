@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)file:///C:/xampp/htdocs/php/sirii.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ballari City Guide</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      color: #fff;
+      background-image: url('https://images.unsplash.com/photo-1549921296-3a4ec9f5a88e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      backdrop-filter: blur(2px);
+    }
+
+    header {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    nav button {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #00f0ff;
+      color: #000;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .section {
+      display: none;
+      padding: 2rem;
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      margin-top: 1rem;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: 0.3s;
+      color: #fff;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      margin-top: auto;
+      background: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌆 Ballari City Guide</h1>
+    <p>Explore Ballari's best food, temples, doctors, education, and more!</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection(&#39;home&#39;)">Home</button>
+    <button onclick="showSection(&#39;food&#39;)">Food</button>
+    <button onclick="showSection(&#39;doctors&#39;)">Doctors</button>
+    <button onclick="showSection(&#39;travel&#39;)">Travels</button>
+    <button onclick="showSection(&#39;rental&#39;)">Rentals</button>
+    <button onclick="showSection(&#39;temples&#39;)">Temples</button>
+    <button onclick="showSection(&#39;education&#39;)">Education</button>
+    <button onclick="showSection(&#39;founder&#39;)">Founder</button>
+  </nav>
+
+  <!-- Home Section -->
+  <div id="home" class="section">
+    <h2>Welcome to Ballari</h2>
+    <p>Your one-stop guide to the best places and services in Ballari!</p>
+  </div>
+
+  <!-- Food Section -->
+  <div id="food" class="section">
+    <h2>🍽️ Best Food Places in Ballari</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./Ballari City Guide_files/saved_resource" alt="Naivedyam Hotel">
+        <h3>Naivedyam Restaurant</h3>
+        <p><strong>Address:</strong> Gandhinagar, Ballari</p>
+        <p><strong>Timing:</strong> 8 AM – 10 PM</p>
+        <p><strong>Contact:</strong> +91 98456 12345</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Doctors Section -->
+  <div id="doctors" class="section">
+    <h2>🧑‍⚕️ Best Doctors in Ballari</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./Ballari City Guide_files/saved_resource(1)" alt="Dr. Ravi">
+        <h3>Dr. Ravi Kumar</h3>
+        <p><strong>Specialty:</strong> Cardiologist</p>
+        <p><strong>Hospital:</strong> Ballari Heart Center</p>
+        <p><strong>Contact:</strong> +91 81234 56789</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Travels Section -->
+  <div id="travel" class="section">
+    <h2>🚌 Best Travel Agencies</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./Ballari City Guide_files/saved_resource(2)" alt="SRS Travels">
+        <h3>SRS Travels</h3>
+        <p><strong>Address:</strong> Bus Stand Road, Ballari</p>
+        <p><strong>Contact:</strong> +91 99887 66554</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rentals Section -->
+  <div id="rental" class="section">
+    <h2>🏡 House Rentals in Ballari</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./Ballari City Guide_files/saved_resource(3)" alt="House Rental">
+        <h3>2BHK for Rent - Kappagal Road</h3>
+        <p><strong>Rent:</strong> ₹8000/month</p>
+        <p><strong>Contact:</strong> +91 90909 09090</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Temples Section -->
+  <div id="temples" class="section">
+    <h2>🛕 Famous Temples in Ballari</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./Ballari City Guide_files/saved_resource(4)" alt="Bellary Temple">
+        <h3>Balaji Temple</h3>
+        <p><strong>Location:</strong> Cowl Bazar, Ballari</p>
+        <p><strong>Timing:</strong> 6 AM – 8 PM</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <div id="education" class="section">
+    <h2>🎓 Education in Ballari</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./Ballari City Guide_files/saved_resource(5)" alt="VIMS Ballari">
+        <h3>VIMS Medical College</h3>
+        <p><strong>Address:</strong> Cantonment, Ballari</p>
+        <p><strong>Contact:</strong> +91 83623 45678</p>
+      </div>
+      <div class="card">
+        <img src="./Ballari City Guide_files/saved_resource(6)" alt="KV Ballari">
+        <h3>Kendriya Vidyalaya</h3>
+        <p><strong>Address:</strong> Cantonment Area</p>
+        <p><strong>Contact:</strong> +91 94835 11223</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Founder Section -->
+  <div id="founder" class="section active">
+    <h2>👨‍💼 Founder Profile</h2>
+    <div class="cards">
+      <div class="card" style="text-align: center;">
+        <img src="./Ballari City Guide_files/saved_resource(7)" alt="Founder" style="width: 200px; height: 200px; object-fit: cover; border-radius: 100px; margin: 0 auto;">
+        <h3>shashi siri</h3>
+        <p><strong>Role:</strong> Founder &amp; Developer</p>
+        <p>shashi siri is the visionary behind Ballari City Guide. He built this platform to connect people to the heart of Ballari.</p>
+        <p><strong>Email:</strong> shashinihas99@gmail.com</p>
+        <p><strong>Phone:</strong> +91 8296606632</p>
+        <p>
+          <a href="file:///C:/xampp/htdocs/php/sirii.html#" style="color: #00f0ff;">LinkedIn</a> |
+          <a href="file:///C:/xampp/htdocs/php/sirii.html#" style="color: #00f0ff;">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Ballari City Guide | Designed with ❤️ for Ballari
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+
+
+</body></html>
